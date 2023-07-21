@@ -14,7 +14,7 @@
 </head>
 <body>
   
-  <h1>Website Admin</h1>
+  <h1>Basic CMS Admin</h1>
 
   <div>
     <a href="dashboard.php">Dashboard</a>
@@ -23,4 +23,6 @@
   
   <hr>
 
+  <?php get_message(); ?>
+  
   <div>
