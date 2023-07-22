@@ -6,6 +6,19 @@ include( 'includes/functions.php' );
 
 secure();
 
+if(isset($_GET['delete']))
+{
+    $query = 'DELETE FROM users
+    WHERE id = '.$_GET['delete'].'
+    LIMIT 1';
+    mysqli_query($connect, $query);
+
+    set_message('User has been deleted');
+
+    header('Location: users.php');
+    die();
+}
+
 include( 'includes/header.php' );
 
 ?>
