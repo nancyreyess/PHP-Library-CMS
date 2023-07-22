@@ -29,7 +29,7 @@ if( isset( $_POST['first'] ) )
     
     set_message( 'User has been added' );
 
-    //header('Location: users.php');
+    header('Location: users.php');
     die();
     
   }
