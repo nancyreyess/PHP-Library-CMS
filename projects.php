@@ -8,14 +8,14 @@ secure();
 
 if(isset($_GET['delete']))
 {
-    $query = 'DELETE FROM users
+    $query = 'DELETE FROM projects
     WHERE id = '.$_GET['delete'].'
     LIMIT 1';
     mysqli_query($connect, $query);
 
-    set_message('User has been deleted');
+    set_message('Project has been deleted');
 
-    header('Location: users.php');
+    header('Location: projects.php');
     die();
 }
 
@@ -24,23 +24,23 @@ include( 'includes/header.php' );
 ?>
 
 
-<h2>Users</h2>
+<h2>Projects</h2>
 
 <?php
 
     $query = 'SELECT *
-        FROM users
-        ORDER BY last, first';
+        FROM projects
+        ORDER BY date';
     $result = mysqli_query($connect, $query);
 
 ?>
 
 <table border="1">
     <tr>
-        <th> First Name </th>
-        <th> Last Name </th>
-        <th> Email Address </th>
-        <th> Status </th>
+        <th> ID </th>
+        <th> Title </th>
+        <th> Type </th>
+        <th> Date </th>
         <th> </th>
         <th> </th>
     </tr>  
@@ -49,15 +49,15 @@ include( 'includes/header.php' );
     <?php while($record = mysqli_fetch_assoc($result)): ?>
 
         <tr>
-            <td> <?php echo $record['first']; ?> </td>
-            <td> <?php echo $record['last']; ?> </td>
-            <td> <?php echo $record['email']; ?> </td>
-            <td> <?php echo $record['active']; ?> </td>
+            <td> <?php echo $record['id']; ?> </td>
+            <td> <?php echo $record['title']; ?> </td>
+            <td> <?php echo $record['type']; ?> </td>
+            <td> <?php echo $record['date']; ?> </td>
             <td>
-                <a href="users_edit.php?id=<?php echo $record['id']; ?>">Edit</a>
+                <a href="projects_edit.php?id=<?php echo $record['id']; ?>">Edit</a>
             </td>
             <td>
-                <a href="users.php?delete=<?php echo $record['id']; ?>"> Delete </a>
+                <a href="projects.php?delete=<?php echo $record['id']; ?>"> Delete </a>
             </td>
         </tr>   
 
@@ -65,4 +65,4 @@ include( 'includes/header.php' );
 
 </table>
 
-<a href="users_add.php"> Add User </a>
+<a href="projects_add.php"> Add Project </a>
