@@ -16,9 +16,9 @@ include( 'includes/header.php' );
 <?php
 
     $query = 'SELECT *
-    FROM users
-    ORDER BY last, first';
-    $result = mysqli_query($result);
+        FROM users
+        ORDER BY last, first';
+    $result = mysqli_query($connect, $query);
 
 ?>
 
@@ -32,7 +32,7 @@ include( 'includes/header.php' );
     </tr>  
 
     <!-- Loop through current records, grab each record as array-->
-    <?php while($record = mysqli_fetch_assoc($connect, $query)); ?>
+    <?php while($record = mysqli_fetch_assoc($result)): ?>
 
         <tr>
             <td> <?php echo $record['first']; ?> </td>
@@ -43,8 +43,10 @@ include( 'includes/header.php' );
                 <a href="users_edit.php?id=<?php echo $record['id']; ?>">Edit</a>
                 <a href="users.php?delete=<?php echo $record['id']; ?>"> Delete </a>
             </td>
-        </tr>
+        </tr>   
 
     <?php endwhile; ?>
 
 </table>
+
+<a href="users_add.php"> Add User </a>
