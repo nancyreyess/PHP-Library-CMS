@@ -9,7 +9,7 @@ secure();
 if(isset($_GET['delete']))
 {
     $query = 'DELETE FROM books
-    WHERE id = '.$_GET['delete'].'
+    WHERE book_id = '.$_GET['delete'].'
     LIMIT 1';
     mysqli_query($connect, $query);
 
@@ -62,7 +62,7 @@ include( 'includes/header.php' );
             <td> <?php echo $record['total_pages']; ?> </td>
             <td> <?php echo $record['copies']; ?> </td>
             <td>
-                <a href="books_edit.php?id=<?php echo $record['book_id']; ?>">Edit</a>
+                <a href="books_edit.php?book_id=<?php echo $record['book_id']; ?>">Edit</a>
             </td>
             <td>
                 <a href="books.php?delete=<?php echo $record['book_id']; ?>"> Delete </a>

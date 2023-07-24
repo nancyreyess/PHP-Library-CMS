@@ -25,7 +25,7 @@ if( isset( $_POST['title'] ) )
       summary = "'.mysqli_real_escape_string( $connect, $_POST['summary'] ).'",
       author = "'.mysqli_real_escape_string( $connect, $_POST['author'] ).'",
       genre = "'.mysqli_real_escape_string( $connect, $_POST['genre'] ).'",
-      publisher = "'.mysqli_real_escape_string( $connect, $_POST['publisher'] ).'"
+      publisher = "'.mysqli_real_escape_string( $connect, $_POST['publisher'] ).'",
       publication_year = "'.mysqli_real_escape_string( $connect, $_POST['publication_year'] ).'",
       total_pages = "'.mysqli_real_escape_string( $connect, $_POST['total_pages'] ).'",
       copies = "'.mysqli_real_escape_string( $connect, $_POST['copies'] ).'"      
@@ -88,7 +88,7 @@ include( 'includes/header.php' );
   <script>
 
   ClassicEditor
-    .create( document.querySelector( '#content' ) )
+    .create( document.querySelector( '#summary' ) )
     .then( editor => {
         console.log( editor );
     } )

@@ -12,7 +12,7 @@ if( isset( $_POST['title'] ) )
   if( $_POST['title'] and $_POST['summary'] )
   {
     
-    $query = 'INSERT INTO books (
+    $query = 'INSERT INTO books ( 
         title,
         summary,
         author,
@@ -26,7 +26,7 @@ if( isset( $_POST['title'] ) )
          "'.mysqli_real_escape_string( $connect, $_POST['summary'] ).'",
          "'.mysqli_real_escape_string( $connect, $_POST['author'] ).'",
          "'.mysqli_real_escape_string( $connect, $_POST['genre'] ).'",
-         "'.mysqli_real_escape_string( $connect, $_POST['publisher'] ).'"
+         "'.mysqli_real_escape_string( $connect, $_POST['publisher'] ).'",
          "'.mysqli_real_escape_string( $connect, $_POST['publication_year'] ).'",
          "'.mysqli_real_escape_string( $connect, $_POST['total_pages'] ).'",
          "'.mysqli_real_escape_string( $connect, $_POST['copies'] ).'"
