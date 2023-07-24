@@ -1,3 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 body {
-    font-family: Arial;
+    font-family: "Lato", sans-serif;
+    padding: 2%;
+    background-image: url("images/bg.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #F59F43;
 }
+.bluecolor {
+    color: #466AA5;
+}
+
+.redcolor {
+    color: #A53D38;
+}
+
+.yellowcolor {
+    color: #F59F43;
+}
+
+.font45{
+    font-size: 45px;
+}
+
+.font25{
+    font-size: 25px;
+}
+
+a{
+    text-decoration: none;
+}
+a:visited{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+
+/* footer */
+.footer{
+    padding-top: 99%;
+    padding-bottom: 1%;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.6); 
+    border: 1px solid black; 
+  }
+  
+
+  th {
+    background-color: #f0f0f0; 
+    padding: 10px;
+  }
+  
+
+  td {
+    padding: 10px;
+  }

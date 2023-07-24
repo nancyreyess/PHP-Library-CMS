@@ -109,7 +109,6 @@ include( 'includes/header.php' );
 
 <p><a href="books.php"><i class="fas fa-arrow-circle-left"></i> Return to Book List</a></p>
 
-
 <?php
 
 include( 'includes/footer.php' );

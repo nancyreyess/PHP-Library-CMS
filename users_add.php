@@ -85,3 +85,9 @@ include( 'includes/header.php' );
   <input type="submit" value="Add User">
   
 </form>
+
+<?php
+
+include( 'includes/footer.php' );
+
+?>

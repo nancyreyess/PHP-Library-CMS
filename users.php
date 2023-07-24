@@ -66,3 +66,14 @@ include( 'includes/header.php' );
 </table>
 
 <a href="users_add.php"> Add User </a>
+
+</br>
+
+<a href="dashboard.php"><-- Go back </a>
+
+<?php
+
+include( 'includes/footer.php' );
+
+?>
+

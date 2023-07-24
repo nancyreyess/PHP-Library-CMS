@@ -74,3 +74,13 @@ include( 'includes/header.php' );
 </table>
 
 <a href="books_add.php"> Add Book </a>
+
+</br>
+
+<a href="dashboard.php"><-- Go back </a>
+
+<?php
+
+include( 'includes/footer.php' );
+
+?>
